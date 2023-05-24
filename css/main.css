@@ -1,15 +1,17 @@
 body   {  
 height: 125vh;  
 margin-top: 10px;  
-padding: 65px;  
+padding: 50px;  
+padding-top: 0;
 background-size: cover;  
 background-color: #212121;  
 }  
 
 header {   
+    background-color: #0f0f0f;
+    left: 0;
+    right: 0;
     position: fixed;  
-    left: 0;  
-    right: 0;  
     top: 5px;  
     height: 35px;  
     display: flex;  
@@ -18,15 +20,11 @@ header {
 }
 
 header * {  
-    display: inline;
-    float: right;  
+    display: inline; 
 }  
 
-header li {  
+header li a {   
     margin-left: 20px;  
-}  
-
-header li a {  
     color: #5798c7;  
     text-decoration: none;  
 }  
@@ -35,44 +33,37 @@ header li a:hover {
     color: #4f852b;
 }
 
-#container {
-    text-align: center;
-}
-
-header ul{
-    display: inline-block;
-    font-family: Arial, Verdana;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-header ul li {
-    margin-left: 50px;
-    display: block;
-    position: relative;
-    float: left;
-    text-align: center;
-}
-
-header li ul {
-    display: none;
-}
-
 article {
     color: #acbdc1;
     font-size: 20px;
+    flex-wrap: wrap;
+    max-width: 40%;
 }
 
-.page {
-    margin: 0;
-}
-
-.title {
+.pageTitle {
     color: green;
     font-size: 25px;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+.media {
+    display: flex;
+}
+
+@media  screen and (max-width: 600px) {
+    body {
+        height: 125vh;  
+        margin-top: 5px;  
+        padding: 10px;  
+        background-size: cover;  
+        background-color: #212121;  
+    }
+
+    article{
+        font-size: 10px;
+        flex-wrap: wrap;
+        max-width: 50%;
+        max-height: 100px;
+    }
 }
