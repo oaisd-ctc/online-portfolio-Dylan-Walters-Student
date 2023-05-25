@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/image-info.css">
+    <link rel="stylesheet" href="css/pages.css">
     <title>Online Portfolio</title>
 </head>
 
@@ -16,11 +17,21 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#AboutMe"><h2>About Me</h2></a></li>
-                <li><a href="#Projects"><h2>Projects</h2></a></li>
-                <li><a href="#Certifications"><h2>Certifications</h2></a></li>
-                <li><a href="#Experience"><h2>Experience</h2></a></li>
-                <li><a href="#ContactDetails"><h2>Contact Details</h2></a></li>
+                <li><a href="#AboutMe">
+                        <h2>About Me</h2>
+                    </a></li>
+                <li><a href="#Projects">
+                        <h2>Projects</h2>
+                    </a></li>
+                <li><a href="#Certifications">
+                        <h2>Certifications</h2>
+                    </a></li>
+                <li><a href="#Experience">
+                        <h2>Experience</h2>
+                    </a></li>
+                <li><a href="#ContactDetails">
+                        <h2>Contact Details</h2>
+                    </a></li>
             </ul>
         </nav>
     </header>
@@ -29,17 +40,59 @@
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">About Me</h3>
             <div class="media">
-                <h4>
-                    This portion is about me <br>
-                    Hello I am dylan walters I will add more later -- ---- ---- -- -- - ----- ------------- ---- ---- -- --
-                    - ----- -----------
-                    -- ---- ---- -- -- - ----- ------------- ---- ---- -- -- - -----
-                </h4>
+                <div id="articleContainer">
+                    <h3>
+                        Hello! I'm Dylan Walters, I've spent the majority of Highschool participating in after school
+                        activites such as: robotics, cross country, track and field, jazz band, and marching band.
+                        Beginning my Junior year I began the Careerline Tech Center program through my sending school,
+                        Zeeland East High School. I joined the Software and Game Development class where I learned to
+                        write code in many languages,
+                        specializing in C#. By joining this program I was able to gain Experience working in groups and
+                        developing my problem solving skills. I'm always excited to work with others and better enhance
+                        my programming knowledge!
+                    </h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
-                <div style="width: 90%;">
-                    <img id="profile" src="images/AboutMe/Profile.jpg" alt="This image is a photo of Dylan Walters standing infront of a wall of red flowers.">
-                    <h4 id="MeDescription">
-                        Dylan Walters
+                    <h4 style="font-size: larger;margin-bottom: 0;">
+                        Fun facts!
+                    </h4>
+
+                    <div class="media mediaWrap">
+                        <h3 style="margin-right: 10%;">
+                            Running Times
+                            <hr>
+                            Mile: 4:52 <br>
+                            Two Mile: 10:40 <br>
+                            5k: 17:51 <br>
+                        </h3>
+
+                        <h3 style="margin-right: 10%;">
+                            Robotics team
+                            <hr>
+                            Team 85 B.O.B. <br>
+                            (Built On Brains)
+                        </h3>
+
+                        <h3 style="margin-right: 10%;">
+                            Employment
+                            <hr>
+                            Menards: July, 2022 to May 22, 2023 <br>
+                            Smooth Logics: starting June 12, 2023
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div id="profileContainer">
+                    <img id="profile" src="images/AboutMe/Profile.jpg"
+                        alt="This image is a photo of Dylan Walters standing infront of a wall of red flowers.">
+
+                    <h4 class="profileDescription">
+                        Dylan Walters: 03/21/06 <br> Software and Game Developer
                     </h4>
                 </div>
             </div>
@@ -49,12 +102,19 @@
     <div id="Projects">
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Projects</h3>
-            <div class="media">
+
+           
                 <h4>
-                    Projects
+                    Reinventing the Wheel
                 </h4>
+
+            <div class="media mediaWrap">
+                <h3>
+                    This group project was focused at teaching the code-behind certain given functions in c# that we often take for granted.
+                    
+                </h3>
             </div>
-            
+
         </div>
     </div>
 
@@ -69,7 +129,7 @@
         </div>
     </div>
 
-    <div id="Experience"> 
+    <div id="Experience">
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Experience</h3>
             <div class="media">
@@ -77,7 +137,7 @@
                     Experience
                 </h4>
             </div>
-            
+
         </div>
 
     </div>
@@ -95,4 +155,5 @@
 
     <!--This code validates in HTML5, 5/25/23, Dylan Walters-->
 </body>
+
 </html>

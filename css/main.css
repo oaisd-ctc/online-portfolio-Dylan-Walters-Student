@@ -9,14 +9,15 @@ padding: 50px;
 padding-top: 0;
 background-size: cover;  
 background-color: #212121;  
+font-family:'Times New Roman', Times, serif;
 }  
 
 header {   
-    background-color: #0f0f0f;
+    background-color: #1a1a1a;
     left: 0;
     right: 0;
     position: fixed;  
-    top: 5px;  
+    top: 0;  
     height: 35px;  
     display: flex;  
     align-items: center;  
@@ -37,22 +38,29 @@ header li a:hover {
     color: #4f852b;
 }
 
-article {
+h3 {
     color: #acbdc1;
-    font-size: 20px;
-    flex-wrap: wrap;
-    max-width: 40%;
+    line-height: 150%;
+}
+
+h4 {
+    color: rgb(241, 187, 124);
+    margin-bottom: 0;
 }
 
 .pageTitle {
-    color: green;
+    color: rgb(99, 167, 99);
     font-size: 25px;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .media {
     display: flex;
+}
+
+.mediaWrap {
+    flex-wrap: wrap;
 }
 
 @media  screen and (max-width: 600px) {

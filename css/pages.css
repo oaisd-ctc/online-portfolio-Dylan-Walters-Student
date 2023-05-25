@@ -1,29 +1,30 @@
 #AboutMe {
-    padding-top: 60px;
 }
-    #MeDescription {
-        color:peru;
-    }
 
+.profileDescription {
+    text-align: center;
+    padding-left: 10%;
+}
+
+#articleContainer {
+   max-width: 65%; 
+   min-width: 375px;
+}
 
 #Experience {
-    padding-top: 60px;
 }
 
 
 
 #Certifications {
-    padding-top: 60px;
 }
 
 
 
 #Projects {
-    padding-top: 60px;
 }
 
 
 
 #ContactDetails {
-    padding-top: 60px;
 }
