@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body   {  
 height: 125vh;  
 margin-top: 10px;  
