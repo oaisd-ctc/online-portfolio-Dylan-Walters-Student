@@ -30,21 +30,28 @@
 }
 
 .h3Contact {
-    background-color: #2b2a2a;
-    max-width: fit-content;
+    background-color: #4163aa;
+    border: #36528d;
     border-radius: 25px;
-    padding: 20px;
+    color: aliceblue;
+    max-width: fit-content;
+    padding: 15px;
 }
 
 .h3Contact:hover {
-    background-color: #6d5832;
+    background-color: #293a5f;
 }
 
 #Phone{
 
 }
-
 #Email{
+
+}
+#GitHub{
+
+}
+#Resume{
 
 }
 

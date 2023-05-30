@@ -13,7 +13,7 @@
 
 
 
-<body>
+<body onload="disableAllContacts()">
     <header>
         <nav>
             <ul>
@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-    
+
     <br>
     <br>
     <br>
@@ -107,15 +107,16 @@
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Projects</h3>
 
-           
-                <h4>
-                    Reinventing the Wheel
-                </h4>
+
+            <h4>
+                Reinventing the Wheel
+            </h4>
 
             <div class="media mediaWrap">
                 <h3>
-                    This group project was focused at teaching the code-behind certain given functions in c# that we often take for granted.
-                    
+                    This group project was focused at teaching the code-behind certain given functions in c# that we
+                    often take for granted.
+
                 </h3>
             </div>
 
@@ -166,18 +167,76 @@
                 <h4>
                     Contact info
                 </h4>
+                <br>
                 <div id="contactContainer">
-                    <h3 class="h3Contact" id="Phone">Phone#</h3>
-                    <h3 class="h3Contact" id="Email">Email</h3>
-                    <h3 class="h3Contact" id="GitHub">GitHub</h3>
-                    <h3 class="h3Contact" id="Resume">Resume</h3>
+                    <button class="h3Contact" onclick="phoneFunction()">Phone#</button>
+                    <button class="h3Contact" onclick="emailFunction()">Email</button>
+                    <button class="h3Contact" onclick="gitHubFunction()">GitHub</button>
+                    <button class="h3Contact" onclick="resumeFunction()">Resume</button>
+                    <h3 id="Phone">(616)201-7277</h3>
+                    <br>
+                    <h3 id="Email">ddwalters987@gmail.com</h3>
+                    <br>
+                    <h3 id="GitHub">https://github.com/Dylan-Walters-Student</h3>
+                    <br>
+                    <div id="Resume">Resume</div>
                 </div>
-                
-
             </div>
         </div>
     </div>
 
+
+    <script>
+        const phoneDiv = document.getElementById("Phone");
+        const EmailDiv = document.getElementById("Email");
+        const GitHubDiv = document.getElementById("GitHub");
+        const ResumeDiv = document.getElementById("Resume");
+
+        function phoneFunction() {
+            if (phoneDiv.style.display === "none") {
+                phoneDiv.style.display = "block";
+                console.log("Block")
+            } else {
+                phoneDiv.style.display = "none";
+                console.log("none")
+            }
+        }
+        function emailFunction() {
+            if (EmailDiv.style.display === "none") {
+                EmailDiv.style.display = "block";
+                console.log("Block")
+            } else {
+                EmailDiv.style.display = "none";
+                console.log("none")
+            }
+        }
+        function gitHubFunction() {
+            if (GitHubDiv.style.display === "none") {
+                GitHubDiv.style.display = "block";
+                console.log("Block")
+            } else {
+                GitHubDiv.style.display = "none";
+                console.log("none")
+            }
+        }
+
+        function resumeFunction() {
+            if (ResumeDiv.style.display === "none") {
+                ResumeDiv.style.display = "block";
+                console.log("Block")
+            } else {
+                ResumeDiv.style.display = "none";
+                console.log("none")
+            }
+        }
+
+        function disableAllContacts() {
+            ResumeDiv.style.display = "none";
+            GitHubDiv.style.display = "none";
+            EmailDiv.style.display = "none";
+            phoneDiv.style.display = "none";
+        }
+    </script>
     <!--This code validates in HTML5, 5/25/23, Dylan Walters-->
 </body>
 
