@@ -3,11 +3,10 @@
 
 .profileDescription {
     text-align: center;
-    padding-left: 10%;
 }
 
 #articleContainer {
-   max-width: 65%; 
+   max-width: 100%; 
    min-width: 375px;
 }
 
@@ -49,8 +48,8 @@
 
 }
 #GitHub{
-
 }
+
 #Resume{
 
 }

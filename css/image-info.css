@@ -1,7 +1,18 @@
-#profile {
+#profileImage {
     width: 100%;
     max-width: 690px;
-    padding-left: 10%;
+    border-radius: 30%;
+}
+
+#GitImage {
+    width: 100px;
+    height: auto;
+}
+
+#ResumeImage {
+    width: 100px;
+    flex: left;
+    height: auto;
 }
 
 @media  screen and (max-width: 600px) {
