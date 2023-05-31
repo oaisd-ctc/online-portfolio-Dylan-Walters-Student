@@ -59,12 +59,7 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
-.pageTitle {
-    color: rgb(99, 167, 99);
-    font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
 
 .media {
     display: flex;
@@ -88,5 +83,27 @@ a:active { text-decoration: none; }
         flex-wrap: wrap;
         max-width: 50%;
         max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    header {   
+        background-color: #1a1a1a;
+        position: fixed;  
+        height: fit-content;  
+        display: flex;  
+        box-shadow: 0 0 10px 0 rgb(57, 88, 92);
+    }
+    
+    header li a {   
+        margin-left: 20px;  
+        color: #5798c7;  
+        text-decoration: none;  
+    }
+
+    nav {
+        text-align: center;
+        width: 500px;
+        min-width: 438px;
     }
 }
