@@ -42,6 +42,7 @@
     color: aliceblue;
     max-width: fit-content;
     padding: 15px;
+    margin-left: 2%;
 }
 
 .h3Contact:hover {
@@ -49,12 +50,14 @@
 }
 
 #Email{
-
 }
 #GitHub{
 }
 
 #Resume{
-
+}
+.contactFlexInfo {
+    display: flex;
+    justify-content: center;
 }
 

@@ -24,11 +24,11 @@
                 <li><a href="#Projects">
                         <h2>Projects</h2>
                     </a></li>
-                <li><a href="#Certifications">
-                        <h2>Certifications</h2>
-                    </a></li>
                 <li><a href="#Experience">
                         <h2>Experience</h2>
+                    </a></li>
+                <li><a href="#Certifications">
+                        <h2>Certifications</h2>
                     </a></li>
                 <li><a href="#ContactDetails">
                         <h2>Contact Details</h2>
@@ -264,19 +264,6 @@
         <hr>
     </div>
 
-    <div id="Certifications">
-        <div style="padding-top: 50px;">
-            <h3 class="pageTitle">Certifications</h3>
-            <img src="images/Certifications/ITFtransparent.png" class="certImage"  alt="ITF Certification">
-                <img src="images/Certifications/ITStransparent.png" class="certImage" id="ITS" alt="Information Technology Specialist Certification">
-                <img src="images/Certifications/IC3transparent.png" class="certImage" alt="IC3 Certification">
-        </div>
-        <br>
-        <br>
-        <br>
-        <hr>
-    </div>
-
     <div id="Experience">
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Experience</h3>
@@ -292,35 +279,53 @@
         <hr>
     </div>
 
+    <div id="Certifications">
+        <div style="padding-top: 50px;">
+            <h3 class="pageTitle">Certifications</h3>
+            <img src="images/Certifications/ITFtransparent.png" class="certImage" alt="ITF Certification">
+            <img src="images/Certifications/ITStransparent.png" class="certImage" id="ITS"
+                alt="Information Technology Specialist Certification">
+            <img src="images/Certifications/IC3transparent.png" class="certImage" alt="IC3 Certification">
+        </div>
+        <br>
+        <br>
+        <br>
+        <hr>
+    </div>
+
     <div id="ContactDetails">
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Contact Details</h3>
             <div>
-                <h4>
-                    Contact info
-                </h4>
                 <br>
                 <div id="contactContainer">
                     <button class="h3Contact" onclick="emailFunction()">Email</button>
                     <button class="h3Contact" onclick="gitHubFunction()">GitHub</button>
                     <button class="h3Contact" onclick="resumeFunction()">Resume</button>
-                    <h3 id="Email">ddwalters987@gmail.com</h3>
+                    <div class="contactFlexInfo" id="Email">
+                        <h3 class="contactFlexItem">ddwalters987@gmail.com</h3>
+                    </div>
                     <br>
-                    <div id="GitHub">
+                    <div class="contactFlexInfo" id="GitHub">
                         <a href="https://github.com/Dylan-Walters-Student">
-                            <h3 style="width: fit-content; float:left; margin-top: 30px;">
+                            <h3>
                                 Click here for my GitHub:
                             </h3>
+                        </a>
+                        <a href="https://github.com/Dylan-Walters-Student">
                             <img src="/images/ContactDetails/github_git_hub_logo_icon_132878.png" class="GitImage"
                                 alt="GitHub">
                         </a>
                     </div>
                     <br>
-                    <div id="Resume">
+                    <div class="contactFlexInfo" id="Resume">
                         <a href="/images/ContactDetails/Resume.pdf" download>
-                            <h3 style="width: fit-content; float:left; margin-top: 30px;">
+                            <h3>
                                 Click here to download my resume:
                             </h3>
+                        </a>
+
+                        <a href="/images/ContactDetails/Resume.pdf" download>
                             <img src="/images/ContactDetails/1443704-200.png" id="ResumeImage" alt="Resume">
                         </a>
                     </div>
@@ -338,8 +343,8 @@
 
         function phoneFunction() {
             if (phoneDiv.style.display === "none") {
-                phoneDiv.style.display = "block";
-                console.log("Block")
+                phoneDiv.style.display = "flex";
+                console.log("flex")
             } else {
                 phoneDiv.style.display = "none";
                 console.log("none")
@@ -347,8 +352,8 @@
         }
         function emailFunction() {
             if (EmailDiv.style.display === "none") {
-                EmailDiv.style.display = "block";
-                console.log("Block")
+                EmailDiv.style.display = "flex";
+                console.log("flex")
             } else {
                 EmailDiv.style.display = "none";
                 console.log("none")
@@ -356,8 +361,8 @@
         }
         function gitHubFunction() {
             if (GitHubDiv.style.display === "none") {
-                GitHubDiv.style.display = "block";
-                console.log("Block")
+                GitHubDiv.style.display = "flex";
+                console.log("flex")
             } else {
                 GitHubDiv.style.display = "none";
                 console.log("none")
@@ -366,8 +371,8 @@
 
         function resumeFunction() {
             if (ResumeDiv.style.display === "none") {
-                ResumeDiv.style.display = "block";
-                console.log("Block")
+                ResumeDiv.style.display = "flex";
+                console.log("flex")
             } else {
                 ResumeDiv.style.display = "none";
                 console.log("none")
