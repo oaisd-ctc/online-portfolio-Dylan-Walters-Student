@@ -21,11 +21,11 @@
                 <li><a href="#AboutMe">
                         <h2>About Me</h2>
                     </a></li>
-                <li><a href="#Projects">
-                        <h2>Projects</h2>
-                    </a></li>
                 <li><a href="#Experience">
                         <h2>Experience</h2>
+                    </a></li>
+                <li><a href="#Projects">
+                        <h2>Projects</h2>
                     </a></li>
                 <li><a href="#Certifications">
                         <h2>Certifications</h2>
@@ -114,169 +114,165 @@
         <hr>
     </div>
 
-
-
-    <div id="Projects">
-        <div style="padding-top: 50px;">
-            <h3 class="pageTitle">Projects</h3>
-            <h4>
-                CTC - Reinventing the Wheel
-            </h4>
-
-            <div class="media mediaWrap">
-                <h3>
-                    This group project was focused at teaching the code-behind certain given functions in c# that we
-                    often take for granted. We re-created different array, math, and string utilities such as:
-                    toLower(string s), hasLetter(string s, char c), contains(int[] x, int y), min(int x, int y), max(int
-                    x, int y). Although these are just a few examples there are many more! It has all been documented
-                    and
-                    published as a NuGet Package you can download! Clicking this image will bring you to our NuGet
-                    Package:
-                </h3>
-
-                <a href="https://www.nuget.org/packages/reinventing-the-wheel-Dylan-Walters-Student/1.0.0">
-                    <img src="/images/Projects/logo-og-600x600.png" class="GitImage" alt="NuGet">
-                </a>
-            </div>
-
-            <h4>
-                CTC - Final Project
-            </h4>
-            <h3>
-                Ending my first year at the Careerline Tech Center I was tasked with creating an interactive video game.
-                For the project we used the Unity game engine and were given a breif overview beforehand. It was our
-                task to learn the software, code, music, graphics, and any other aspect needed to finish the game. I
-                have added a copy of the game into this online Portfolio for you to play below!
-            </h3>
-            <br>
-            <div id="unityGame">
-                <div id="unity-container" class="unity-desktop">
-                    <canvas id="unity-canvas" width=960 height=600></canvas>
-                    <div id="unity-loading-bar">
-                        <div id="unity-logo"></div>
-                        <div id="unity-progress-bar-empty">
-                            <div id="unity-progress-bar-full"></div>
-                        </div>
-                    </div>
-                    <div id="unity-warning"> </div>
-                    <div id="unity-footer">
-                        <div id="unity-webgl-logo"></div>
-                        <div id="unity-fullscreen-button"></div>
-                    </div>
-                </div>
-                <script>
-                    var container = document.querySelector("#unity-container");
-                    var canvas = document.querySelector("#unity-canvas");
-                    var loadingBar = document.querySelector("#unity-loading-bar");
-                    var progressBarFull = document.querySelector("#unity-progress-bar-full");
-                    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-                    var warningBanner = document.querySelector("#unity-warning");
-
-                    // Shows a temporary message banner/ribbon for a few seconds, or
-                    // a permanent error message on top of the canvas if type=='error'.
-                    // If type=='warning', a yellow highlight color is used.
-                    // Modify or remove this function to customize the visually presented
-                    // way that non-critical warnings and error messages are presented to the
-                    // user.
-                    function unityShowBanner(msg, type) {
-                        function updateBannerVisibility() {
-                            warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-                        }
-                        var div = document.createElement('div');
-                        div.innerHTML = msg;
-                        warningBanner.appendChild(div);
-                        if (type == 'error') div.style = 'background: red; padding: 10px;';
-                        else {
-                            if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-                            setTimeout(function () {
-                                warningBanner.removeChild(div);
-                                updateBannerVisibility();
-                            }, 5000);
-                        }
-                        updateBannerVisibility();
-                    }
-
-                    var buildUrl = "Build";
-                    var loaderUrl = buildUrl + "/Roh-No-Botics.loader.js";
-                    var config = {
-                        dataUrl: buildUrl + "/Roh-No-Botics.data",
-                        frameworkUrl: buildUrl + "/Roh-No-Botics.framework.js",
-                        codeUrl: buildUrl + "/Roh-No-Botics.wasm",
-                        streamingAssetsUrl: "StreamingAssets",
-                        companyName: "DefaultCompany",
-                        productName: "Roh-No Botics",
-                        productVersion: "1.0",
-                        showBanner: unityShowBanner,
-                    };
-
-                    // By default Unity keeps WebGL canvas render target size matched with
-                    // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-                    // Set this to false if you want to decouple this synchronization from
-                    // happening inside the engine, and you would instead like to size up
-                    // the canvas DOM size and WebGL render target sizes yourself.
-                    // config.matchWebGLToCanvasSize = false;
-
-                    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                        // Mobile device style: fill the whole browser client area with the game canvas:
-
-                        var meta = document.createElement('meta');
-                        meta.name = 'viewport';
-                        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-                        document.getElementsByTagName('head')[0].appendChild(meta);
-                        container.className = "unity-mobile";
-                        canvas.className = "unity-mobile";
-
-                        // To lower canvas resolution on mobile devices to gain some
-                        // performance, uncomment the following line:
-                        // config.devicePixelRatio = 1;
-
-                        unityShowBanner('WebGL builds are not supported on mobile devices.');
-                    } else {
-                        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-                        canvas.style.width = "960px";
-                        canvas.style.height = "600px";
-                    }
-
-                    loadingBar.style.display = "block";
-
-                    var script = document.createElement("script");
-                    script.src = loaderUrl;
-                    script.onload = () => {
-                        createUnityInstance(canvas, config, (progress) => {
-                            progressBarFull.style.width = 100 * progress + "%";
-                        }).then((unityInstance) => {
-                            loadingBar.style.display = "none";
-                            fullscreenButton.onclick = () => {
-                                unityInstance.SetFullscreen(1);
-                            };
-                        }).catch((message) => {
-                            alert(message);
-                        });
-                    };
-                    document.body.appendChild(script);
-                </script>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <hr>
-    </div>
-
     <div id="Experience">
         <div style="padding-top: 50px;">
             <h3 class="pageTitle">Experience</h3>
             <div class="media">
-                <h4>
-                    Experience
-                </h4>
+                <div id="Projects">
+                    <div style="padding-top: 50px;">
+                        <div class="media mediaWrap">
+                            <h4>
+                                CTC - Reinventing the Wheel
+                            </h4>
+                            <h3>
+                                This group project was focused at teaching the code-behind certain given functions in c#
+                                that we
+                                often take for granted. We re-created different array, math, and string utilities such
+                                as:
+                                toLower(string s), hasLetter(string s, char c), contains(int[] x, int y), min(int x, int
+                                y), max(int
+                                x, int y). Although these are just a few examples there are many more! It has all been
+                                documented
+                                and
+                                published as a NuGet Package you can download! Clicking this image will bring you to our
+                                NuGet
+                                Package:
+                            </h3>
+
+                            <a href="https://www.nuget.org/packages/reinventing-the-wheel-Dylan-Walters-Student/1.0.0">
+                                <img src="/images/Projects/logo-og-600x600.png" class="GitImage" alt="NuGet">
+                            </a>
+                        </div>
+
+                        <h4>
+                            CTC - Final Project
+                        </h4>
+                        <h3>
+                            Ending my first year at the Careerline Tech Center I was tasked with creating an interactive
+                            video game.
+                            For the project we used the Unity game engine and were given a breif overview beforehand. It
+                            was our
+                            task to learn the software, code, music, graphics, and any other aspect needed to finish the
+                            game. I
+                            have added a copy of the game into this online Portfolio for you to play below!
+                        </h3>
+                        <br>
+                        <div id="unityGame">
+                            <div id="unity-container" class="unity-desktop">
+                                <canvas id="unity-canvas" width=960 height=600></canvas>
+                                <div id="unity-loading-bar">
+                                    <div id="unity-logo"></div>
+                                    <div id="unity-progress-bar-empty">
+                                        <div id="unity-progress-bar-full"></div>
+                                    </div>
+                                </div>
+                                <div id="unity-warning"> </div>
+                                <div id="unity-footer">
+                                    <div id="unity-webgl-logo"></div>
+                                    <div id="unity-fullscreen-button"></div>
+                                </div>
+                            </div>
+                            <script>
+                                var container = document.querySelector("#unity-container");
+                                var canvas = document.querySelector("#unity-canvas");
+                                var loadingBar = document.querySelector("#unity-loading-bar");
+                                var progressBarFull = document.querySelector("#unity-progress-bar-full");
+                                var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+                                var warningBanner = document.querySelector("#unity-warning");
+
+                                // Shows a temporary message banner/ribbon for a few seconds, or
+                                // a permanent error message on top of the canvas if type=='error'.
+                                // If type=='warning', a yellow highlight color is used.
+                                // Modify or remove this function to customize the visually presented
+                                // way that non-critical warnings and error messages are presented to the
+                                // user.
+                                function unityShowBanner(msg, type) {
+                                    function updateBannerVisibility() {
+                                        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+                                    }
+                                    var div = document.createElement('div');
+                                    div.innerHTML = msg;
+                                    warningBanner.appendChild(div);
+                                    if (type == 'error') div.style = 'background: red; padding: 10px;';
+                                    else {
+                                        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                                        setTimeout(function () {
+                                            warningBanner.removeChild(div);
+                                            updateBannerVisibility();
+                                        }, 5000);
+                                    }
+                                    updateBannerVisibility();
+                                }
+
+                                var buildUrl = "Build";
+                                var loaderUrl = buildUrl + "/Roh-No-Botics.loader.js";
+                                var config = {
+                                    dataUrl: buildUrl + "/Roh-No-Botics.data",
+                                    frameworkUrl: buildUrl + "/Roh-No-Botics.framework.js",
+                                    codeUrl: buildUrl + "/Roh-No-Botics.wasm",
+                                    streamingAssetsUrl: "StreamingAssets",
+                                    companyName: "DefaultCompany",
+                                    productName: "Roh-No Botics",
+                                    productVersion: "1.0",
+                                    showBanner: unityShowBanner,
+                                };
+
+                                // By default Unity keeps WebGL canvas render target size matched with
+                                // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+                                // Set this to false if you want to decouple this synchronization from
+                                // happening inside the engine, and you would instead like to size up
+                                // the canvas DOM size and WebGL render target sizes yourself.
+                                // config.matchWebGLToCanvasSize = false;
+
+                                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                                    // Mobile device style: fill the whole browser client area with the game canvas:
+
+                                    var meta = document.createElement('meta');
+                                    meta.name = 'viewport';
+                                    meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                                    document.getElementsByTagName('head')[0].appendChild(meta);
+                                    container.className = "unity-mobile";
+                                    canvas.className = "unity-mobile";
+
+                                    // To lower canvas resolution on mobile devices to gain some
+                                    // performance, uncomment the following line:
+                                    // config.devicePixelRatio = 1;
+
+                                    unityShowBanner('WebGL builds are not supported on mobile devices.');
+                                } else {
+                                    // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+                                    canvas.style.width = "960px";
+                                    canvas.style.height = "600px";
+                                }
+
+                                loadingBar.style.display = "block";
+
+                                var script = document.createElement("script");
+                                script.src = loaderUrl;
+                                script.onload = () => {
+                                    createUnityInstance(canvas, config, (progress) => {
+                                        progressBarFull.style.width = 100 * progress + "%";
+                                    }).then((unityInstance) => {
+                                        loadingBar.style.display = "none";
+                                        fullscreenButton.onclick = () => {
+                                            unityInstance.SetFullscreen(1);
+                                        };
+                                    }).catch((message) => {
+                                        alert(message);
+                                    });
+                                };
+                                document.body.appendChild(script);
+                            </script>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <hr>
     </div>
 
     <div id="Certifications">
