@@ -23,6 +23,18 @@
     margin-left: 15%;
 }
 
+.roboticsImage {
+    margin: 20px;
+    box-shadow: 0 0 10px 0 rgb(57, 88, 92);
+}
+
+#roboticsImageSmall {
+    width: 20%;
+    height: auto;
+}
+
+
+
 @media  screen and (max-width: 600px) {
     #profile {
         max-width: 150px;
